@@ -35,6 +35,13 @@ img {
   font-size: 1rem;
 }
 
+.book h4 {
+  color: rgb(61, 47, 61);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+}
+
 .bookList {
   width: 90vw;
   max-width: 1170px;
