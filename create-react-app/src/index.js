@@ -33,7 +33,14 @@ const Image = () => (
   />
 )
 const Title = () => <h2>Book Title</h2>
-const Author = () => <h4>Author</h4>
+const Author = () => {
+  const inlineHeadingStyles = {
+    color: 'grey',
+    fontSize: '0,75rem',
+    marginTop: '0,5rem',
+  }
+  return <h4 style={inlineHeadingStyles}>Author</h4>
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
