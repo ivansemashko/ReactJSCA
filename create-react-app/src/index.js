@@ -9,37 +9,23 @@ const BookList = () => {
       <Book />
       <Book />
       <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   )
 }
 
+const author = 'Author name'
 const Book = () => {
+  const title = 'Book name'
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img
+        src="https://m.media-amazon.com/images/I/81SIQfF-aGL._SL1500_.jpg"
+        alt={title + ' image'}
+      />
+      <h2>{title}</h2>
+      <h4>{author.toLocaleUpperCase()}</h4>
     </article>
   )
-}
-
-const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/51ZvZFJOsrL._SL1499_.jpg"
-    alt=""
-  />
-)
-const Title = () => <h2>Book Title</h2>
-const Author = () => {
-  const inlineHeadingStyles = {
-    color: 'grey',
-    fontSize: '0,75rem',
-    marginTop: '0,5rem',
-  }
-  return <h4 style={inlineHeadingStyles}>Author</h4>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
