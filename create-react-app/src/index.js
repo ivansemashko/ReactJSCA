@@ -41,13 +41,13 @@ const BookList = () => {
   )
 }
 
-const Book = (props) => {
-  console.log(props)
+const Book = ({ author, title, img }) => {
+  // const { author, title, img } = props
   return (
     <article className="book">
-      <img src={props.img} alt={props.title + ' image'} />
-      <h2>{props.title}</h2>
-      <h4>{props.author}</h4>
+      <img src={img} alt={title + ' image'} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   )
 }
