@@ -36,18 +36,25 @@ const BookList = () => {
         author={thirdBook.author}
         title={thirdBook.title}
         img={thirdBook.img}
-      />
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          provident, quas pariatur qui esse veniam ut distinctio quis aliquam
+        </p>
+        <button>Click me</button>
+      </Book>
     </section>
   )
 }
 
-const Book = ({ author, title, img }) => {
+const Book = ({ author, title, img, children }) => {
   // const { author, title, img } = props
   return (
     <article className="book">
       <img src={img} alt={title + ' image'} />
       <h2>{title}</h2>
       <h4>{author}</h4>
+      {children}
     </article>
   )
 }
