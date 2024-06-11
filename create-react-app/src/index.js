@@ -3,52 +3,31 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
-const firstBook = {
-  author: 'A1uthor',
-  title: 'First Book',
-  img: 'https://m.media-amazon.com/images/I/81F30JDZU9L._SL1500_.jpg',
-}
-const secondBook = {
-  author: 'A2uthor',
-  title: 'Second Book',
-  img: 'https://m.media-amazon.com/images/I/51U6lRPzsML._SY445_SX342_.jpg',
-}
-const thirdBook = {
-  author: 'A3thor',
-  title: 'Third Book',
-  img: 'https://m.media-amazon.com/images/I/81SIQfF-aGL._SL1500_.jpg',
-}
+const books = [
+  {
+    author: 'A1uthor',
+    title: 'First Book',
+    img: 'https://m.media-amazon.com/images/I/81F30JDZU9L._SL1500_.jpg',
+  },
+  {
+    author: 'A2uthor',
+    title: 'Second Book',
+    img: 'https://m.media-amazon.com/images/I/51U6lRPzsML._SY445_SX342_.jpg',
+  },
+  {
+    author: 'A3thor',
+    title: 'Third Book',
+    img: 'https://m.media-amazon.com/images/I/81SIQfF-aGL._SL1500_.jpg',
+  },
+]
 
 const BookList = () => {
   return (
-    <section className="bookList">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      />
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
-      <Book
-        author={thirdBook.author}
-        title={thirdBook.title}
-        img={thirdBook.img}
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-          provident, quas pariatur qui esse veniam ut distinctio quis aliquam
-        </p>
-        <button>Click me</button>
-      </Book>
-    </section>
+    <section className="bookList">{books.map((book) => Book(book))}</section>
   )
 }
 
 const Book = ({ author, title, img, children }) => {
-  // const { author, title, img } = props
   return (
     <article className="book">
       <img src={img} alt={title + ' image'} />
