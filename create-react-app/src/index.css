@@ -30,6 +30,11 @@ img {
   width: 70%;
   object-fit: cover;
 }
+h1 {
+  margin: 10%;
+  text-align: center;
+  color: rgb(39, 39, 39, 0.7);
+}
 
 .book h2 {
   margin-top: 1rem;
