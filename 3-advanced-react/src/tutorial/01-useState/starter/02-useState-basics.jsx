@@ -6,11 +6,12 @@ const UseStateBasics = () => {
   // const func = useState('hello')[1]
   // console.log(value)
   // console.log(func)
-
+  const colors = ['red', 'green', 'blue']
   const [count, setCount] = useState(0)
+  const [name, setName] = useState(1)
   return (
     <div>
-      <h4>You Clicked {count}</h4>
+      <h4 style={{ color: setColor }}>You Clicked {count}</h4>
       <button
         className="btn"
         type="button"
@@ -18,7 +19,16 @@ const UseStateBasics = () => {
           setCount(count + 1)
         }}
       >
-        Click
+        Click For +1
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={() => {
+          setCount(count + 1)
+        }}
+      >
+        Click For Change Color Text
       </button>
     </div>
   )
