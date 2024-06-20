@@ -2,13 +2,13 @@ import { useState } from 'react'
 
 const UseStateObject = () => {
   const [person, setPerson] = useState({
-    name: 'john',
-    age: 23,
+    name: 'No Ivan Semashko',
+    age: -21,
     hobby: 'read books',
   })
 
   const displayPerson = () => {
-    setPerson({ name: 'Jjohn', age: 223, hobby: 'Rread books' })
+    setPerson({ name: 'Ivan Semashko', age: 21, hobby: 'Drive BMW cars' })
   }
   return (
     <>
