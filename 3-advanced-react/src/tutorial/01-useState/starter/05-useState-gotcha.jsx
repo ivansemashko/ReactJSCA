@@ -1,14 +1,18 @@
 import { useState } from 'react'
 const UseStateGotcha = () => {
   const [value, setValue] = useState(0)
+  const [color, setColor] = useState('Empty')
+  const randomColor = () => {
+    const colorList = ['blue', 'green', 'red']
+    let random = Math.floor(Math.random() * 3)
+    setColor(colorList[random])
+  }
 
   const handleClick = () => {
-    setTimeout(() => {
-      setValue((currentState) => {
-        const newState = currentState + 1
-        return newState
-      })
-    }, 3000)
+    setValue((currentState) => {
+      const newState = currentState + 1
+      return newState
+    })
   }
 
   return (
@@ -16,6 +20,10 @@ const UseStateGotcha = () => {
       <h1>{value}</h1>
       <button className="btn" type="button" onClick={handleClick}>
         Click me
+      </button>
+      <h3 style={{ color: color }}>{color}</h3>
+      <button className="btn" onClick={randomColor}>
+        Random
       </button>
     </div>
   )
