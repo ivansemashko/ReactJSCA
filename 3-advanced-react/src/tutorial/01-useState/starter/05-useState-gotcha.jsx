@@ -2,11 +2,14 @@ import { useState } from 'react'
 const UseStateGotcha = () => {
   const [value, setValue] = useState(0)
   const [color, setColor] = useState('Empty')
+
   const randomColor = () => {
     const colorList = ['blue', 'green', 'red']
     let random = Math.floor(Math.random() * 3)
     setColor(colorList[random])
   }
+
+  setInterval(randomColor, 5000)
 
   const handleClick = () => {
     setValue((currentState) => {
