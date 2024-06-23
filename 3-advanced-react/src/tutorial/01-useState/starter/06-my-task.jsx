@@ -1,24 +1,37 @@
 import { useState } from 'react'
 
-// const windowOuterWidth = window.outerWidth
-// const windowOuterHeight = window.outerHeight
-
-// const [buttonWidth, setButtonWidth] = useState(0)
-// const [buttonHeight, setButtonHeight] = useState(1)
+const windowOuterWidth = window.outerWidth
+const windowOuterHeight = window.outerHeight
 
 const bubbleButton = () => {
-  //   const randomWidthAndHeight = () => {
-  //     let wightButton = Math.floor(Math.random() * windowOuterWidth)
-  //     let heightButton = Math.floor(Math.random() * windowOuterHeight)
+  const [buttonWidth, setButtonWidth] = useState(windowOuterWidth / 2)
+  const [buttonHeight, setButtonHeight] = useState(windowOuterHeight / 2)
 
-  //     setButtonHeight(heightButton)
-  //     setButtonWidth(wightButton)
-  //   }
+  const randomCord = (maxCordHeight, maxCordWidth) => {
+    let randomWidth = Math.floor(Math.random() * maxCordWidth)
+    let randomHeight = Math.floor(Math.random() * maxCordHeight)
+    setButtonHeight(randomHeight)
+    setButtonWidth(randomWidth)
+  }
 
   return (
     <div>
-      <h2>Window Width: {windowOuterWidth}</h2>
-      <h2>Window Height: {windowOuterHeight}</h2>
+      <button
+        onMouseEnter={() => randomCord(windowOuterHeight, windowOuterWidth)}
+        onClick={() => alert('So nice!!')}
+        className="btn"
+        style={{
+          position: 'absolute',
+          left: buttonWidth,
+          top: buttonHeight,
+          width: '3%',
+          fontSize: '100%',
+          height: '3%',
+        }}
+        type="button"
+      >
+        Click
+      </button>
     </div>
   )
 }
