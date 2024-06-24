@@ -1,4 +1,4 @@
-import Started from './tutorial/01-useState/starter/06-my-task'
+import Started from './tutorial/02-useEffect/starter/02-useEffect-basics'
 
 function App() {
   return (
