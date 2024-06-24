@@ -1,4 +1,4 @@
-import Started from './tutorial/02-useEffect/starter/04-fetch-data'
+import Started from './tutorial/03-conditional-rendering/starter/01-multiple-returns-basics'
 
 function App() {
   return (
