@@ -1,3 +1,3 @@
 # ReactJSCA
 Learning React JS
-In WEBSITE ONLINE - https://ivans-react-app.netlify.app
+Goal: at the end of the study to create an analog of FaceBook, but with music!
