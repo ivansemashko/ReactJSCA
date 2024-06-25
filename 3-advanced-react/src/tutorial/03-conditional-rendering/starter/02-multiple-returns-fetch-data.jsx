@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-const url = 'https://api.github.com/users/ivansemashkos'
+const url = 'https://api.github.com/users/ivansemashko'
 
 const MultipleReturnsFetchData = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -37,12 +37,16 @@ const MultipleReturnsFetchData = () => {
     return <h2>Loading...</h2>
   }
 
+  const { avatar_url, login, name, company, bio, html_url } = user
   return (
     <>
-      <img src={user.avatar_url} alt="" srcset="" />
+      <img src={avatar_url} alt={login} />
       <div>
-        <h3>{user.login}</h3>
-        <a href={user.html_url}>Link</a>
+        <h2>{name}</h2>
+        <h3>{login}</h3>
+        <a href={html_url}>Link</a>
+        <h4>works at {company}</h4>
+        <h3>{bio}</h3>
       </div>
     </>
   )
