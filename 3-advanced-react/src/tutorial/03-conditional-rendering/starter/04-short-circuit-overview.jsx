@@ -1,23 +1,18 @@
 import { useState } from 'react'
 
 const ShortCircuitOverview = () => {
-  // true
-  const z = 1
-  // false
-  const x = 0
+  //* false
+  const [text, setText] = useState('')
+  //* true
+  const [name, setName] = useState('ivan')
 
-  console.log(z && x)
-  console.log(x || z)
-  // if (z) console.log('true')
-  // else console.log('false')
-
-  function displayName(params) {
-    return params || 'No params'
-  }
-
-  console.log(displayName())
-  console.log(displayName('Yoo'))
-
-  return <h2>short circuit overview</h2>
+  return (
+    <div>
+      <h4>Falsy OR || : {text || 'Spell'}</h4>
+      <h4>Falsy AND && : {text || 'Spell'}</h4>
+      <h4>Falsy OR || : {name || 'Spell'}</h4>
+      <h4>Falsy and && : {name || 'Spell'}</h4>
+    </div>
+  )
 }
 export default ShortCircuitOverview
