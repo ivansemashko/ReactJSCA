@@ -1,5 +1,23 @@
-const CleanupFunction = () => {
-  return <h2>cleanup function</h2>;
-};
+import { useEffect } from 'react'
+import { useState } from 'react'
 
-export default CleanupFunction;
+const CleanupFunction = () => {
+  const [toggle, setToggle] = useState(false)
+  return (
+    <div>
+      <button className="btn" onClick={() => setToggle(!toggle)}>
+        Toggle
+      </button>
+      {toggle && <RandomComponent />}
+    </div>
+  )
+}
+
+const RandomComponent = () => {
+  useEffect(() => {
+    console.log('Int')
+  }, [])
+  return <h1>Hello there</h1>
+}
+
+export default CleanupFunction
