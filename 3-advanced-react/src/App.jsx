@@ -1,4 +1,4 @@
-import Started from './tutorial/03-conditional-rendering/starter/05-short-circuit-examples'
+import Started from './tutorial/03-conditional-rendering/starter/06-toggle-challenge'
 function App() {
   return (
     <div className="container">
