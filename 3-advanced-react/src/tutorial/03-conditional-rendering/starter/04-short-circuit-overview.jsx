@@ -9,9 +9,9 @@ const ShortCircuitOverview = () => {
   return (
     <div>
       <h4>Falsy OR || : {text || 'Spell'}</h4>
-      <h4>Falsy AND && : {text || 'Spell'}</h4>
+      <h4>Falsy AND && : {text && 'Spell'}</h4>
       <h4>Falsy OR || : {name || 'Spell'}</h4>
-      <h4>Falsy and && : {name || 'Spell'}</h4>
+      <h4>Falsy and && : {name && 'Spell'}</h4>
     </div>
   )
 }

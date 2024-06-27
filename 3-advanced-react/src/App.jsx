@@ -1,4 +1,4 @@
-import Started from './tutorial/03-conditional-rendering/starter/04-short-circuit-overview'
+import Started from './tutorial/03-conditional-rendering/starter/05-short-circuit-examples'
 function App() {
   return (
     <div className="container">
