@@ -1,9 +1,15 @@
-import Started from './tutorial/04-project-structure/starter/Navbar'
+// import Home from './tutorial/04-project-structure/starter/Pages/Home'
+// import About from './tutorial/04-project-structure/starter/Pages/About'
+import {
+  Home,
+  About,
+} from './tutorial/04-project-structure/starter/Pages/index'
 
 function App() {
   return (
     <div className="container">
-      <Started />
+      <Home />
+      <About />
     </div>
   )
 }
