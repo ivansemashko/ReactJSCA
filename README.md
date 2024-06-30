@@ -34,6 +34,6 @@ Simple React Snippets
 tsx
 vscode-icons
 zipFS - a zip file system
-
+glean
 
 ```
