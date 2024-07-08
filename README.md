@@ -20,7 +20,6 @@ Hightlight Matching Tag
 HTML CSS support
 html to JSX
 indent-rainbow
-Live Server
 Monokai Night The,e
 Prettier - Code formatter
 Prettier ESLint
@@ -31,7 +30,6 @@ React
 React Native tools
 Simple React Snippets
 tsx
-vscode-icons
 zipFS - a zip file system
 glean
 ```
