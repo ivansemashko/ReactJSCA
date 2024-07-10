@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import UserContainer from './UserContainer'
+import { NavbarContext } from './Navbar'
 
-const NavLinks = ({ user, logout }) => {
+const NavLinks = () => {
   return (
     <div className="nav-container">
       <ul className="nav-links">
@@ -12,7 +13,7 @@ const NavLinks = ({ user, logout }) => {
           <a href="#">ABOUT</a>
         </li>
       </ul>
-      <UserContainer user={user} logout={logout} />
+      <UserContainer />
     </div>
   )
 }
