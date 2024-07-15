@@ -1,11 +1,25 @@
 import React, { useReducer } from 'react'
-import { data } from '../../../data'
+import { data, people } from '../../../data'
 
 const defaultState = {
   people: data,
+  isLoading: false,
 }
 
-const reducer = () => {}
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'CLEAR_LIST':
+      return { ...state, people: [] }
+    case 'RESET_ITEMS':
+      return { ...state, people: data }
+    // ! Invalid case (!!!)
+    case 'REMOVE_ITEM':
+      return { ...state, people: people.filter((human) => human.id !== u_id) }
+    default:
+      console.log('Undefined type')
+      break
+  }
+}
 
 const ReducerBasics = () => {
   const [state, dispatch] = useReducer(reducer, defaultState)
@@ -13,15 +27,15 @@ const ReducerBasics = () => {
   // const [people, setPeople] = React.useState(data)
 
   const removeItem = (id) => {
-    // let newPeople = people.filter((person) => person.id !== id)
-    // setPeople(newPeople)
+    dispatch({ type: 'REMOVE_ITEM' })
   }
 
   const resetItems = () => {
-    // setPeople(data)
+    dispatch({ type: 'RESET_ITEMS' })
   }
 
   const clearList = () => {
+    dispatch({ type: 'CLEAR_LIST' })
     // setPeople([])
   }
   console.log(state)
