@@ -6,11 +6,15 @@ const defaultState = {
   isLoading: false,
 }
 
+const CLEAR_LIST = 'CLEAR_LIST'
+const RESET_LIST = 'RESET_LIST'
+const DELETE_ITEM = 'DELETE ITEM'
+
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'CLEAR_LIST':
+    case CLEAR_LIST:
       return { ...state, people: [] }
-    case 'RESET_ITEMS':
+    case RESET_LIST:
       return { ...state, people: data }
     // ! Invalid case (!!!)
     case 'REMOVE_ITEM':
@@ -19,6 +23,7 @@ const reducer = (state, action) => {
       console.log('Undefined type')
       break
   }
+  throw new Error('No match')
 }
 
 const ReducerBasics = () => {
@@ -27,7 +32,7 @@ const ReducerBasics = () => {
   // const [people, setPeople] = React.useState(data)
 
   const removeItem = (id) => {
-    dispatch({ type: 'REMOVE_ITEM' })
+    dispatch({ type: CLEAR_LIST })
   }
 
   const resetItems = () => {
