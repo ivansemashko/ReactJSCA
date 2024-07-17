@@ -8,7 +8,7 @@ const defaultState = {
 
 const CLEAR_LIST = 'CLEAR_LIST'
 const RESET_LIST = 'RESET_LIST'
-const DELETE_ITEM = 'DELETE ITEM'
+const REMOVE_ITEM = 'REMOVE_ITEM'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -17,8 +17,9 @@ const reducer = (state, action) => {
     case RESET_LIST:
       return { ...state, people: data }
     // ! Invalid case (!!!)
-    case 'REMOVE_ITEM':
-      return { ...state, people: people.filter((human) => human.id !== u_id) }
+    case REMOVE_ITEM:
+      const np = state.people.filter((a) => a.id !== action.id.id)
+      return { ...state, people: newPeople }
     default:
       console.log('Undefined type')
       break
@@ -32,11 +33,11 @@ const ReducerBasics = () => {
   // const [people, setPeople] = React.useState(data)
 
   const removeItem = (id) => {
-    dispatch({ type: CLEAR_LIST })
+    dispatch({ type: REMOVE_ITEM, id: { id } })
   }
 
   const resetItems = () => {
-    dispatch({ type: 'RESET_ITEMS' })
+    dispatch({ type: RESET_LIST })
   }
 
   const clearList = () => {
