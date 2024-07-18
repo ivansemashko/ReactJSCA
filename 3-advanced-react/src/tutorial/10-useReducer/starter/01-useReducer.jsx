@@ -1,30 +1,11 @@
 import React, { useReducer } from 'react'
 import { data, people } from '../../../data'
+import { CLEAR_LIST, REMOVE_ITEM, RESET_LIST } from './actions'
+import reducer from './reducer'
 
 const defaultState = {
   people: data,
   isLoading: false,
-}
-
-const CLEAR_LIST = 'CLEAR_LIST'
-const RESET_LIST = 'RESET_LIST'
-const REMOVE_ITEM = 'REMOVE_ITEM'
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case CLEAR_LIST:
-      return { ...state, people: [] }
-    case RESET_LIST:
-      return { ...state, people: data }
-    // ! Invalid case (!!!)
-    case REMOVE_ITEM:
-      const np = state.people.filter((a) => a.id !== action.id.id)
-      return { ...state, people: newPeople }
-    default:
-      console.log('Undefined type')
-      break
-  }
-  throw new Error('No match')
 }
 
 const ReducerBasics = () => {
